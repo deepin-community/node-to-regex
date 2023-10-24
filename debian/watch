@@ -1,0 +1,23 @@
+version=4
+
+opts=dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-to-regex-$1/ \
+ https://github.com/jonschlinkert/to-regex/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+opts=searchmode=plain,pgpmode=none,ctype=nodejs,component=safe-regex,filenamemangle=s/^.*?(\d[\d\.]*@ARCHIVE_EXT@)/node-safe-regex-$1/ \
+ https://registry.npmjs.org/safe-regex \
+ https://registry.npmjs.org/safe-regex/-/safe-regex-(\d[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts=dversionmangle=auto,ctype=nodejs,component=regexp-tree,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-regexp-tree-$1/ \
+ https://github.com/DmitrySoshnikov/regexp-tree/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-safe-regex,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-safe-regex-$1/" \
+ https://registry.npmjs.org/@types/safe-regex https://registry.npmjs.org/@types/safe-regex/-/safe-regex-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-to-regex,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-to-regex-$1/" \
+ https://registry.npmjs.org/@types/to-regex https://registry.npmjs.org/@types/to-regex/-/to-regex-([\d\.]+)@ARCHIVE_EXT@ checksum

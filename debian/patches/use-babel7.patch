@@ -1,0 +1,21 @@
+Adapt preset names for babel 7
+
+--- a/regexp-tree/.babelrc
++++ b/regexp-tree/.babelrc
+@@ -3,14 +3,14 @@
+     "production": {
+       "presets": [
+         [
+-          "env",
++          "@babel/env",
+           {
+             "targets": {
+               "node": "0.12"
+             }
+           }
+         ],
+-        "flow"
++        "@babel/flow"
+       ]
+     }
+   }

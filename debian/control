@@ -1,15 +1,38 @@
-Source: template-repository
-Section: unknown
+Source: node-to-regex
+Section: javascript
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , mocha <!nocheck>
+ , node-babel7
+ , node-cli-table
+ , node-colors
+ , node-define-property
+ , node-extend-shallow
+ , node-nomnom
+ , node-regex-not
+ , node-shelljs
+ , node-tape <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-to-regex
+Vcs-Git: https://salsa.debian.org/js-team/node-to-regex.git
+Homepage: https://github.com/jonschlinkert/to-regex
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: node-to-regex
+Architecture: all
+Depends: ${misc:Depends}
+ , node-define-property
+ , node-extend-shallow
+ , node-regex-not
+ , nodejs:any
+Provides: ${nodejs:Provides}
+Description: regex generator from string or array of strings
+ to-regex  can be used to generate a regex from a string or array of strings.
+ .
+ This package installs also regexptree, a regular expressions processor, and
+ safe-regex, which detects potentially catastrophic exponential-time regular
+ expressions by limiting the star height to 1.
