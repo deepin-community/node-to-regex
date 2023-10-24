@@ -1,5 +1,130 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-to-regex (3.0.2+~cs6.3.28-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+
+  [ Yadd ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Add ctype=nodejs to component(s)
+  * Fix GitHub tags regex
+  * Use dh-sequence-nodejs
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Drop dependency to nodejs
+  * Fix debian/watch
+  * Embed typescript definitions
+  * New upstream version 3.0.2+~cs6.3.28
+  * Update copyright
+  * Update nodejs dependency to nodejs:any
+  * Update lintian overrides
+
+ -- Yadd <yadd@debian.org>  Thu, 25 Nov 2021 22:19:54 +0100
+
+node-to-regex (3.0.2+~cs2.2.22-1) unstable; urgency=medium
+
+  * Team upload
+  * Use uscan checksum
+  * New upstream version 3.0.2+~cs2.2.22: updates regexptree to 0.1.21.
+    Really: 3.0.2+~2.1.1+~0.1.21
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 05 Jun 2020 08:50:42 +0200
+
+node-to-regex (3.0.2+~2.1.1+~0.1.19-1) unstable; urgency=medium
+
+  [ Xavier Guimard ]
+  * New regexptree version 0.1.19
+
+  [ Pirate Praveen ]
+  * Build with Babel 7
+  * Drop dh-buildinfo from build dependency
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 06 May 2020 18:07:27 +0530
+
+node-to-regex (3.0.2+~2.1.1+~0.1.18-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.0
+  * New upstream version 3.0.2+~2.1.1+~0.1.18
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 05 Feb 2020 15:24:23 +0100
+
+node-to-regex (3.0.2+~2.1.1+~0.1.17-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 3.0.2+~2.1.1+~0.1.17
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 12 Dec 2019 20:54:32 +0100
+
+node-to-regex (3.0.2+~2.1.1+~0.1.16-1) unstable; urgency=medium
+
+  * Team upload
+  * New regexptree version 0.1.16
+  * Remove embedded syntax-cli and update patch
+  * Update copyright
+  * Update lintian overrides
+  * Update description
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 22 Nov 2019 19:20:53 +0100
+
+node-to-regex (3.0.2+~2.1.1+~0.1.14-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.4.1
+  * New upstream version 3.0.2+~2.1.1+~0.1.14
+  * Update test (jest not available)
+  * Fix saferegex/bin/cli permission
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 07 Nov 2019 20:03:18 +0100
+
+node-to-regex (3.0.2+~2.0.2+~0.1.14-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 3.0.2+~2.0.2+~0.1.14
+  * Refresh patch
+  * Add "Rules-Requires-Root: no"
+  * Use debian/nodejs/root_modules to install components (instead of
+    debian/nodejs/*/install) and use ${nodejs:Provides}
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 26 Sep 2019 21:42:27 +0200
+
+node-to-regex (3.0.2+~2.0.2+~0.1.10-2) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable after successful tests
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.0
+  * Switch build and install to pkg-js-tools
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 02 Sep 2019 07:17:31 +0200
+
+node-to-regex (3.0.2+~2.0.2+~0.1.10-1) experimental; urgency=medium
+
+  * Team upload
+  * Add gbp.conf
+  * Bump debhelper compatibility level to 11
+  * Declare compliance with policy 4.3.0
+  * Change section to javascript
+  * Fix VCS fields
+  * Update debian/copyright
+  * Switch tests to pkg-js-tools
+  * Add safe-regex and regex-tree components
+  * New upstream version 3.0.2+~2.0.2+~0.1.10
+  * Add upstream/metadata
+  * Import syntax-cli in debian/build_modules (required to build regexp-tree)
+  * Add lintian-overrides to hide false positives
+  * Add patch to fix regexp-tree build paths
+  * Add debian/clean
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 04 Jun 2019 10:56:04 +0200
+
+node-to-regex (3.0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #842445)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 29 Oct 2016 18:55:31 +0530

@@ -1,0 +1,10 @@
+set -e
+
+echo "# Try to load regexp-tree"
+node -e 'require("regexp-tree")'
+
+echo "# Try to load safe-regex"
+node -e 'require("safe-regex")'
+
+echo "# to-regex test (mocha)"
+mocha -R spec

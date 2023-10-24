@@ -1,4 +1,12 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
 
 %:
 	dh $@
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod +x $(TMP)/usr/share/nodejs/safe-regex/bin/cli.js

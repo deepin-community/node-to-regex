@@ -1,0 +1,5 @@
+# False positives
+source-is-missing regexp-tree/src/parser/generated/regexp-tree.js
+source-contains-prebuilt-javascript-object regexp-tree/src/parser/generated/regexp-tree.js
+very-long-line-length-in-source-file regexp-tree/src/parser/generated/regexp-tree.js line 325 is 21261 characters long (>512)
+very-long-line-length-in-source-file regexp-tree/src/parser/regexp.bnf line 31 is 10199 characters long (>512)
